@@ -54,20 +54,20 @@ Certainly. To add a Windows client to the Bareos Director configuration, you'll 
 9. Add the following content:
    ```
    FileSet {
-     Name = "Windows Full Set"
+     Name = "Windows Users Backup"
      Include {
        Options {
-         Signature = MD5
-         Drive Type = fixed
+         Signature = SHA256
+         Compression = GZIP
          IgnoreCase = yes
+         OneFS = yes
          WildFile = "[A-Z]:/pagefile.sys"
          WildDir = "[A-Z]:/RECYCLER"
          WildDir = "[A-Z]:/$RECYCLE.BIN"
          WildDir = "[A-Z]:/System Volume Information"
          Exclude = yes
        }
-       File = "C:/"
-       File = "D:/"
+       File = "C:/Users"
      }
    }
    ```
