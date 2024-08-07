@@ -21,9 +21,6 @@ Certainly. To add a Windows client to the Bareos Director configuration, you'll 
      FDPort = 9102
      Catalog = MyCatalog
      Password = "password"          # password for Remote File Daemon
-     File Retention = 60 days
-     Job Retention = 6 months
-     AutoPrune = yes
    }
    ```
    Replace "windows-client-fd" with the client name you set during the Windows installation, "windows.client.ip.address" with the actual IP address, and "password" with the password you set.
